@@ -8,6 +8,9 @@ instance_create_layer(x,y,"Instances",obj_player_shadow);
 state = state_player.run;
 origin = [x,y];
 
+can_roll = true;
+can_attack = true;
+
 #endregion
 
 #region PLAYER ATTRIBUTES (CAN CHANGE)

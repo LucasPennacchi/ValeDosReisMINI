@@ -1,19 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_wall",
+  "%Name":"oCollision",
   "eventList":[],
   "managed":true,
-  "name":"obj_wall",
+  "name":"oCollision",
   "overriddenProperties":[],
   "parent":{
-    "name":"Invisible",
-    "path":"folders/Objects/Invisible.yy",
+    "name":"Scene",
+    "path":"folders/Objects/Scene.yy",
   },
-  "parentObjectId":{
-    "name":"oCollision",
-    "path":"objects/oCollision/oCollision.yy",
-  },
-  "persistent":true,
+  "parentObjectId":null,
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -30,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_wall",
-    "path":"sprites/spr_wall/spr_wall.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

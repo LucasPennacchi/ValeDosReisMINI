@@ -13,6 +13,7 @@ enum state_player {
 	walk,
 	run,
 	follow,
+	roll,
 	attack,
 	take_dmg,
 	die,
