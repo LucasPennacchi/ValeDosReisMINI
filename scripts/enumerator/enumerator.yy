@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"enumerator",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"enumerator",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

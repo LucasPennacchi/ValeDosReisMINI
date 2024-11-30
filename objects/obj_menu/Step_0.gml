@@ -1,0 +1,58 @@
+/// @description How the menu will be controlled
+
+switch (state){
+	case state_menu.title:
+	{	
+		if (keyboard_check_pressed(vk_anykey)){
+			title_fade = true;
+		}
+		if(!title_fade){
+			if (title.image_alpha < 1) title.image_alpha += .1;
+			if (title.y != 32) title.y = lerp(title.y,32,0.1);
+		} else {
+			if (title.image_alpha > 0){
+				title.image_alpha -= .1;
+				if (title.y != 0) title.y = lerp(title.y,0,0.1);
+			} else state = state_menu.menu;
+		}
+	}
+	break;
+	case state_menu.menu:
+	{
+		menu_move = (keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down)) - (keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up));
+		menu_index += menu_move;
+		if (menu_index < 0) menu_index = menu_items_length - 1;
+		if (menu_index > menu_items_length - 1) menu_index = 0;
+
+		if (menu_index != last_selected) audio_play_sound(snd_menu_select,1,false);
+
+		last_selected = menu_index;
+		
+		if (keyboard_check_pressed(vk_space)){
+			menu_choose(menu_index);
+		}
+	}
+	break;
+	
+	case state_menu.options:
+	{
+	}
+	break;
+	
+	case state_menu.controls:
+	{
+	}
+	break;
+	
+	case state_menu.credits:
+	{
+	}
+	break;
+	
+	case state_menu.quit:
+	{
+		game_end();
+	}
+	break;
+
+}
