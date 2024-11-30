@@ -6,3 +6,14 @@ enum state_menu {
 	options,
 	quit,
 }
+
+enum state_player {
+	spawn,
+	idle,
+	walk,
+	run,
+	follow,
+	attack,
+	take_dmg,
+	die,
+}

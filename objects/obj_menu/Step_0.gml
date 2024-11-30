@@ -20,7 +20,7 @@ switch (state){
 	break;
 	case state_menu.menu:
 	{
-		menu_move = (keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down)) - (keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up));
+		menu_move = (keyboard_check_pressed(global.key_down)) - (keyboard_check_pressed(global.key_up));
 		menu_index += menu_move;
 		if (menu_index < 0) menu_index = menu_items_length - 1;
 		if (menu_index > menu_items_length - 1) menu_index = 0;

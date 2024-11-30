@@ -16,6 +16,10 @@ function menu_choose (menu_index){
 	switch (menu_index){
 		case 0:
 		{
+			var center_x = room_width / 2;
+			var center_y = room_height / 2;
+			instance_create_layer(center_x,center_y,"Instances",obj_player);
+			instance_destroy()
 		}
 		break;
 		case 1:

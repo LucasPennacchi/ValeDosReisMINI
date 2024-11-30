@@ -1,5 +1,5 @@
 /// @description Writing Menu's items
-draw_reset_text();
+draw_reset();
 
 var center_x = display_get_gui_width() / 2;
 var center_y = display_get_gui_height() / 2;
@@ -44,4 +44,4 @@ else if (state == state_menu.controls){
 else if (state == state_menu.credits){
 }
 
-draw_reset_text();
+draw_reset();
