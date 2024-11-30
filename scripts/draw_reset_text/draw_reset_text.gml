@@ -1,0 +1,8 @@
+// Os recursos de script mudaram para a v2.3.0; veja
+// https://help.yoyogames.com/hc/en-us/articles/360005277377 para obter mais informações
+function draw_reset_text(){
+	draw_set_color(#cbdbfc);
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_center);
+	draw_set_font(fnt_game);
+}
