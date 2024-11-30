@@ -30,6 +30,7 @@ switch (state){
 		last_selected = menu_index;
 		
 		if (keyboard_check_pressed(vk_space)){
+			audio_play_sound(snd_menu_select_1,1,false);
 			menu_choose(menu_index);
 		}
 	}
@@ -37,12 +38,17 @@ switch (state){
 	
 	case state_menu.options:
 	{
+		if (keyboard_check_pressed(vk_space)){
+			audio_play_sound(snd_menu_select_1,1,false);
+			state = state_menu.menu;
+		}
 	}
 	break;
 	
 	case state_menu.controls:
 	{
 		if (keyboard_check_pressed(vk_space)){
+			audio_play_sound(snd_menu_select_1,1,false);
 			state = state_menu.menu;
 		}
 	}
@@ -50,6 +56,10 @@ switch (state){
 	
 	case state_menu.credits:
 	{
+		if (keyboard_check_pressed(vk_space)){
+			audio_play_sound(snd_menu_select_1,1,false);
+			state = state_menu.menu;
+		}
 	}
 	break;
 	

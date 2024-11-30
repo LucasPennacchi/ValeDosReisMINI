@@ -31,14 +31,14 @@ else if (state == state_menu.controls){
 		"Pause\n"
 	);
 	draw_text(center_x*1.2,center_y,
-		string(global.key_up)+"\n"+
-		string(global.key_down)+"\n"+
-		string(global.key_left)+"\n"+
-		string(global.key_right)+"\n"+
-		string(global.key_roll)+"\n"+
-		string(global.key_attack)+"\n"+
-		string(global.key_interact)+"\n"+
-		string(global.key_pause)+"\n"
+		string(display_char(global.key_up))+"\n"+
+		string(display_char(global.key_down))+"\n"+
+		string(display_char(global.key_left))+"\n"+
+		string(display_char(global.key_right))+"\n"+
+		string(display_char(global.key_roll))+"\n"+
+		string(display_char(global.key_attack))+"\n"+
+		string(display_char(global.key_interact))+"\n"+
+		string(display_char(global.key_pause))+"\n"
 	);
 }
 else if (state == state_menu.credits){

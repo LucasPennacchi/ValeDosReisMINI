@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"display_char",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"display_char",
+  "parent":{
+    "name":"Draw",
+    "path":"folders/Scripts/Draw.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
