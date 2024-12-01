@@ -22,6 +22,7 @@ var _attack_key = keyboard_check_pressed(global.key_attack);
 #endregion
 
 
+if (!instance_exists(weapon)) weapon = instance_create_layer(x,y,"Hitboxes",obj_weapon_sword);
 
 if (hp <= 0) state = STATE_PLAYER.DIE;
 if (place_meeting(x,y,obj_hole) && state != STATE_PLAYER.FALL && !invulnerable){
@@ -122,13 +123,33 @@ switch (state){
 	}
 	break;
 	
-	case STATE_PLAYER.ATTACK:
+	case STATE_PLAYER.ATTACK: // REMOVED
 	{
+		with(weapon){
+		attacking = true;
+		}
+		can_atk = false;
+		atk_ep = (-1) * weapon.ep_cost;
+		atk_delay = weapon.atk_delay;
+		state = STATE_PLAYER.IDLE;
 	}
 	break;
 	
 	case STATE_PLAYER.TAKE_DMG:
 	{
+		if (sprite_index != spr_player_take_dmg){
+			sprite_index = spr_player_take_dmg;
+			image_index = 0;
+			//move_dir = point_direction(0,0,(_key_right - _key_left), (_key_down - _key_up));
+			invulnerable = true;
+		}
+		
+		image_speed = 10;
+		timer_invulnerability = 0;
+		
+		if(ceil(image_index) >= image_number - 0.1){
+			state = STATE_PLAYER.IDLE;
+		}
 	}
 	break;
 	

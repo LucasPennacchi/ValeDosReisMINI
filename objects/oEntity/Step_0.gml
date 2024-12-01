@@ -41,7 +41,7 @@ if (invulnerable){
 } else timer_invulnerability = 0;
 
 // Save last pos (timed by last_pos_delay)
-if (state != state_player.fall){
+if (state != STATE_PLAYER.FALL){
 	timer_last_pos += 1;
 	if (timer_last_pos >= last_pos_delay * room_speed) {
 		timer_last_pos = 0;

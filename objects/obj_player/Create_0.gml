@@ -9,7 +9,7 @@ state = STATE_PLAYER.IDLE;
 origin = [x,y];
 
 can_roll = true;
-can_attack = true;
+can_atk = true;
 can_move = true;
 move_dir = 0;
 return_pos = last_pos;
@@ -35,13 +35,13 @@ velc_modifier = 1;
 
 ep_max = 5;
 ep = ep_max;
-ep_delay = 2;
+ep_delay = 1;
 
-weapon = oWeapon;
-if (instance_exists(weapon)){
-	atk_ep = -weapon.ep_cost;
-	atk_delay = weapon.atk_delay;
-}
+weapon = instance_create_layer(x,y,"Hitboxes",obj_weapon_sword);
+weapon.target = self;
+
+atk_ep = (-1) * weapon.ep_cost;
+atk_delay = weapon.atk_delay;
 
 roll_ep = -1;
 roll_delay = 0.3;
@@ -63,11 +63,21 @@ function state_energy (_modifier, _allow_below_zero = false){
 	return true;
 }
 function change_state(_move_key = false, _roll_key= false, _attack_key= false){
-	if (_attack_key && can_attack && state_energy(atk_ep)) state = STATE_PLAYER.ATTACK;
+	if (_attack_key && can_atk && state_energy(atk_ep)) attack(); //state = STATE_PLAYER.ATTACK;
 	else if (_move_key && can_move){
 		state = STATE_PLAYER.RUN;
 		if (_roll_key && can_roll && state_energy(roll_ep)) state = STATE_PLAYER.ROLL;
 	} else if (velh == 0 && velv == 0) state = STATE_PLAYER.IDLE;
+}
+
+function attack(){
+	with(weapon){
+		attacking = true;
+	}
+	can_atk = false;
+	atk_ep = (-1) * weapon.ep_cost;
+	atk_delay = weapon.atk_delay;
+	
 }
 
 #endregion

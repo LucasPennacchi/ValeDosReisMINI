@@ -9,7 +9,7 @@ if (state == STATE_MENU.MENU){
 	var _i = 0;
 	repeat (menu_items_length) {
 		draw_set_color(COLOR.C2);
-		if (menu_index == i) draw_set_color(COLOR.C1);
+		if (menu_index == _i) draw_set_color(COLOR.C1);
 		draw_text(_center_x, _center_y + (30 *_i),menu_items[_i]);
 		_i++;
 	}
