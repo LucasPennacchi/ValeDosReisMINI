@@ -1,7 +1,7 @@
 /// @description Starting point
 
 
-state = state_menu.title;
+state = STATE_MENU.TITLE;
 
 title = obj_title;
 instance_create_layer(64,0,"Menu",title);
@@ -14,13 +14,13 @@ menu_items_length = array_length(menu_items);
 menu_index = 0;
 last_selected = 0;
 
-function menu_choose (menu_index){
-	switch (menu_index){
+function menu_choose (_menu_index){
+	switch (_menu_index){
 		case 0:
 		{
-			var center_x = room_width / 2;
-			var center_y = room_height / 2;
-			instance_create_layer(center_x,center_y,"Instances",obj_player);
+			var _center_x = room_width / 2;
+			var _center_y = room_height / 2;
+			instance_create_layer(_center_x,_center_y,"Instances",obj_player);
 			instance_destroy()
 		}
 		break;
@@ -30,22 +30,22 @@ function menu_choose (menu_index){
 		break;
 		case 2:
 		{
-			state = state_menu.options;
+			state = STATE_MENU.OPTIONS;
 		}
 		break;
 		case 3:
 		{
-			state = state_menu.controls;
+			state = STATE_MENU.CONTROLS;
 		}
 		break;
 		case 4:
 		{
-			state = state_menu.credits;
+			state = STATE_MENU.CREDITS;
 		}
 		break;
 		case 5:
 		{
-			state = state_menu.quit;
+			state = STATE_MENU.QUIT;
 		}
 		break;
 		

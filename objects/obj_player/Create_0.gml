@@ -5,7 +5,7 @@ event_inherited(); // oEntity default create
 
 depth = 5;
 instance_create_layer(x,y,"Instances",obj_player_shadow);
-state = state_player.idle;
+state = STATE_PLAYER.IDLE;
 origin = [x,y];
 
 can_roll = true;
@@ -51,8 +51,8 @@ roll_delay = 0.3;
 
 #region FUNCTIONS
 
-function stateEnergy (_modifier, _allowBelowZero = false){
-	if (!(_allowBelowZero) && (ep + _modifier < 0)) return false;
+function state_energy (_modifier, _allow_below_zero = false){
+	if (!(_allow_below_zero) && (ep + _modifier < 0)) return false;
 	ep += _modifier;
 	if (_modifier < 0) {
 		ep_lost = true
@@ -62,12 +62,12 @@ function stateEnergy (_modifier, _allowBelowZero = false){
 	if (ep < 0) ep = 0;
 	return true;
 }
-function changeState(_move_key = false, _roll_key= false, _attack_key= false){
-	if (_attack_key && can_attack && stateEnergy(atk_ep)) state = state_player.attack;
+function change_state(_move_key = false, _roll_key= false, _attack_key= false){
+	if (_attack_key && can_attack && state_energy(atk_ep)) state = STATE_PLAYER.ATTACK;
 	else if (_move_key && can_move){
-		state = state_player.run;
-		if (_roll_key && can_roll && stateEnergy(roll_ep)) state = state_player.roll;
-	} else if (velh == 0 && velv == 0) state = state_player.idle;
+		state = STATE_PLAYER.RUN;
+		if (_roll_key && can_roll && state_energy(roll_ep)) state = STATE_PLAYER.ROLL;
+	} else if (velh == 0 && velv == 0) state = STATE_PLAYER.IDLE;
 }
 
 #endregion

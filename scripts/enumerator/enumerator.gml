@@ -1,30 +1,30 @@
-enum color {
-	c1 = #cbdbfc,
-	c2 = #596989,
-	c3 = #596989,
-	c4 = #35334c,
-	c5 = #27243d,
-	c6 = #222034,
+enum COLOR {
+	C1 = #cbdbfc,
+	C2 = #596989,
+	C3 = #596989,
+	C4 = #35334c,
+	C5 = #27243d,
+	C6 = #222034,
 }
 
-enum state_menu {
-	title,
-	menu,
-	credits,
-	controls,
-	options,
-	quit,
+enum STATE_MENU {
+	TITLE,
+	MENU,
+	CREDITS,
+	CONTROLS,
+	OPTIONS,
+	QUIT,
 }
 
-enum state_player {
-	spawn,
-	idle,
-	walk,
-	run,
-	follow,
-	roll,
-	attack,
-	take_dmg,
-	die,
-	fall,
+enum STATE_PLAYER {
+	SPAWN,
+	IDLE,
+	WALK,
+	RUN,
+	FOLLOW,
+	ROLL,
+	ATTACK,
+	TAKE_DMG,
+	DIE,
+	FALL,
 }

@@ -9,10 +9,10 @@ if (global.pause){
 	draw_rectangle(0,0,_gui_x,_gui_y,false);
 	draw_reset();
 	
-	var center_x = display_get_gui_width() / 2;
-	var center_y = display_get_gui_height() / 2;
+	var _center_x = display_get_gui_width() / 2;
+	var _center_y = display_get_gui_height() / 2;
 	draw_set_font(fnt_menu);
-	draw_text(center_x,center_y,"Paused");
+	draw_text(_center_x,_center_y,"Paused");
 }
 
 draw_reset();
