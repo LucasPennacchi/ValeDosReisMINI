@@ -8,6 +8,8 @@ instance_create_layer(64,0,"Menu",title);
 title.image_alpha = 0;
 title_fade = false;
 
+if (instance_exists(obj_pause)) instance_destroy(obj_pause);
+if (instance_exists(obj_player)) instance_destroy(obj_player);
 
 menu_items = ["New game","Load","Options","Controls","Credits","Quit"];
 menu_items_length = array_length(menu_items);
@@ -20,9 +22,9 @@ function menu_choose (_menu_index){
 		{
 			var _center_x = room_width / 2;
 			var _center_y = room_height / 2;
-			instance_create_layer(_center_x,_center_y,"Instances",obj_player);
-			instance_create_layer(_center_x,_center_y,"Menu",obj_pause);
-			instance_destroy()
+			create_one(obj_player,,_center_x,_center_y);
+			create_one(obj_pause,"Menu");
+			instance_destroy();
 		}
 		break;
 		case 1:

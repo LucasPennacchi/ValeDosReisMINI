@@ -20,7 +20,7 @@ if (instance_exists(obj_player) && can_enter){
 }
 
 if (touching && !instance_exists(obj_blackout)){
-	instance_create_layer(x,y,"Menu",obj_blackout);
+	create_one(obj_blackout,"Menu");
 } else if (!touching && instance_exists(obj_blackout)){
 	instance_destroy(obj_blackout);
 } else if (touching && instance_exists(obj_blackout)){

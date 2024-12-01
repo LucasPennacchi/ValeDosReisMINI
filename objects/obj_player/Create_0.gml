@@ -37,7 +37,8 @@ ep_max = 5;
 ep = ep_max;
 ep_delay = 1;
 
-weapon = instance_create_layer(x,y,"Hitboxes",obj_weapon_sword);
+weapon = obj_weapon_sword;
+weapon = create_one(weapon,"Hitboxes");
 weapon.target = self;
 
 atk_ep = (-1) * weapon.ep_cost;

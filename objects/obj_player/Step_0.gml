@@ -22,7 +22,7 @@ var _attack_key = keyboard_check_pressed(global.key_attack);
 #endregion
 
 
-if (!instance_exists(weapon)) weapon = instance_create_layer(x,y,"Hitboxes",obj_weapon_sword);
+create_one(weapon,"Hitboxes");
 
 if (hp <= 0) state = STATE_PLAYER.DIE;
 if (place_meeting(x,y,obj_hole) && state != STATE_PLAYER.FALL && !invulnerable){
@@ -45,8 +45,6 @@ switch (state){
 			x = 64;
 			y = lerp(y,56,.1);
 			if (round(y) == 56) _flag = true;
-		} else if (room == rm_menu) {
-			instance_destroy();
 		}
 		
 		if (_flag) state = STATE_PLAYER.IDLE;

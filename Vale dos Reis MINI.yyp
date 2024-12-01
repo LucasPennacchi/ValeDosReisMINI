@@ -51,6 +51,7 @@
   "name":"Vale dos Reis MINI",
   "resources":[
     {"id":{"name":"fnt_game","path":"fonts/fnt_game/fnt_game.yy",},},
+    {"id":{"name":"fnt_menu_outline","path":"fonts/fnt_menu_outline/fnt_menu_outline.yy",},},
     {"id":{"name":"fnt_menu","path":"fonts/fnt_menu/fnt_menu.yy",},},
     {"id":{"name":"obj_blackout","path":"objects/obj_blackout/obj_blackout.yy",},},
     {"id":{"name":"obj_config","path":"objects/obj_config/obj_config.yy",},},
@@ -73,6 +74,7 @@
     {"id":{"name":"rm_lobby","path":"rooms/rm_lobby/rm_lobby.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"id":{"name":"collision","path":"scripts/collision/collision.yy",},},
+    {"id":{"name":"create_one","path":"scripts/create_one/create_one.yy",},},
     {"id":{"name":"display_char","path":"scripts/display_char/display_char.yy",},},
     {"id":{"name":"draw_reset","path":"scripts/draw_reset/draw_reset.yy",},},
     {"id":{"name":"enumerator","path":"scripts/enumerator/enumerator.yy",},},

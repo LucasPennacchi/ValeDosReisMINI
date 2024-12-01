@@ -17,9 +17,25 @@ if (global.pause){
 	draw_text(_center_x,_center_y,"Paused");
 }
 if (global.show_game_time){
+	var _text = "Time: " + string(global.game_time/global.frames_per_second);
+	if (!global.pause){
+		font_enable_effects(fnt_menu_outline, true,
+		{
+			outlineEnable: true,
+			outlineDistance: 4,
+			outlineColor: COLOR.C4,
+			outlineAlpha: 1,
+		})
+		draw_set_font(fnt_menu_outline);
+		draw_set_halign(fa_left);
+		draw_text(_gui_x/16,_gui_y/9,_text);
+	}
+	
 	draw_reset();
 	draw_set_font(fnt_menu);
 	draw_set_halign(fa_left);
-	draw_text(_gui_x/16,_gui_y/9,"Time: " + string(global.game_time/global.frames_per_second));
+	draw_text(_gui_x/16,_gui_y/9,_text);
+	
+	
 }
 draw_reset();
