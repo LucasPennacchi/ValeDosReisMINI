@@ -16,6 +16,7 @@ menu_items_length = array_length(menu_items);
 menu_index = 0;
 last_selected = 0;
 
+
 function menu_choose (_menu_index){
 	switch (_menu_index){
 		case 0:
@@ -54,3 +55,4 @@ function menu_choose (_menu_index){
 		
 	}
 }
+

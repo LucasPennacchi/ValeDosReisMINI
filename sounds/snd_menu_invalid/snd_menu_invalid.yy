@@ -2,8 +2,8 @@
   "$GMSound":"",
   "%Name":"snd_menu_invalid",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"Menu",
+    "path":"audiogroups/Menu",
   },
   "bitDepth":1,
   "bitRate":128,

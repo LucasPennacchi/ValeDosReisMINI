@@ -14,8 +14,6 @@ if (state == STATE_MENU.MENU){
 		_i++;
 	}
 }
-else if (state == STATE_MENU.OPTIONS){
-}
 else if (state == STATE_MENU.CONTROLS){
 	draw_set_halign(fa_left);
 	

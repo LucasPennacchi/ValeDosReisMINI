@@ -16,7 +16,7 @@ if (global.pause){
 	draw_set_font(fnt_menu);
 	draw_text(_center_x,_center_y,"Paused");
 }
-if (global.show_game_time){
+if (global.show_game_time == 2 || (global.show_game_time == 1 && global.pause)){
 	var _text = "Time: " + string(global.game_time/global.frames_per_second);
 	if (!global.pause){
 		font_enable_effects(fnt_menu_outline, true,

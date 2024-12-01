@@ -3,6 +3,7 @@
 switch (state){
 	case STATE_MENU.TITLE:
 	{	
+		
 		if (keyboard_check_pressed(vk_anykey) && !title_fade){
 			title_fade = true;
 			audio_play_sound(snd_notification,1,false);
@@ -20,6 +21,8 @@ switch (state){
 	break;
 	case STATE_MENU.MENU:
 	{
+		if (instance_exists(title)) instance_destroy(title);
+		
 		var _menu_move = (keyboard_check_pressed(global.key_down)) - (keyboard_check_pressed(global.key_up));
 		menu_index += _menu_move;
 		if (menu_index < 0) menu_index = menu_items_length - 1;
@@ -38,10 +41,8 @@ switch (state){
 	
 	case STATE_MENU.OPTIONS:
 	{
-		if (keyboard_check_pressed(vk_space)){
-			audio_play_sound(snd_menu_select_1,1,false);
-			state = STATE_MENU.MENU;
-		}
+		create_one(obj_options,"Menu");
+		instance_destroy();
 	}
 	break;
 	

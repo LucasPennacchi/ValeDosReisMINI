@@ -2,8 +2,8 @@
   "$GMSound":"",
   "%Name":"snd_fall",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"Player",
+    "path":"audiogroups/Player",
   },
   "bitDepth":1,
   "bitRate":128,
