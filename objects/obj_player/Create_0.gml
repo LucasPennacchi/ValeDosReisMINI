@@ -27,13 +27,13 @@ timer_ep = 0;
 #region PLAYER ATTRIBUTES (CAN CHANGE)
 
 hp_max = 5;
-hp = 1;
+hp = 3;
 
 dmg = 1;
 velc = .8;
 velc_modifier = 1;
 
-ep_max = 10;
+ep_max = 5;
 ep = ep_max;
 ep_delay = 2;
 
@@ -43,7 +43,7 @@ if (instance_exists(weapon)){
 	atk_delay = weapon.atk_delay;
 }
 
-roll_ep = -.5;
+roll_ep = -1;
 roll_delay = 0.3;
 
 
@@ -54,7 +54,10 @@ roll_delay = 0.3;
 function stateEnergy (_modifier, _allowBelowZero = false){
 	if (!(_allowBelowZero) && (ep + _modifier < 0)) return false;
 	ep += _modifier;
-	if (_modifier < 0) ep_lost = true;
+	if (_modifier < 0) {
+		ep_lost = true
+		timer_ep = 0;
+	}
 	if (ep > ep_max) ep = ep_max;
 	if (ep < 0) ep = 0;
 	return true;

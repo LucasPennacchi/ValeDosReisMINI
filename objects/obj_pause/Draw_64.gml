@@ -1,9 +1,12 @@
 /// @description Draw Pause
+var _gui_x = display_get_gui_width();
+var _gui_y = display_get_gui_height();
+
 draw_reset();
 if (global.pause){
 	draw_set_color(c_black);
 	draw_set_alpha(.7);
-	draw_rectangle(0,0,display_get_gui_width(),display_get_gui_height(),false);
+	draw_rectangle(0,0,_gui_x,_gui_y,false);
 	draw_reset();
 	
 	var center_x = display_get_gui_width() / 2;

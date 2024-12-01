@@ -79,8 +79,6 @@ switch (state){
 		var _velocity = velc;
 		image_speed = 14*_velocity;
 		
-		changeState(_move_key,_roll_key,_attack_key);
-		
 		move_dir = point_direction(0,0,(_key_right - _key_left), (_key_down - _key_up));
 		velh = lengthdir_x(_velocity * _move_key, move_dir);
 		velv = lengthdir_y(_velocity * _move_key, move_dir);
@@ -192,7 +190,7 @@ if (ep_lost){
 
 // Energy Points Recovery
 if (!ep_lost){
-	if (ep < ep_max) ep += .1;
+	if (ep < ep_max) ep += .05;
 	else ep = ep_max;
 }
 

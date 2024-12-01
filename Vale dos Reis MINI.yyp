@@ -51,6 +51,7 @@
   "resources":[
     {"id":{"name":"fnt_game","path":"fonts/fnt_game/fnt_game.yy",},},
     {"id":{"name":"fnt_menu","path":"fonts/fnt_menu/fnt_menu.yy",},},
+    {"id":{"name":"obj_blackout","path":"objects/obj_blackout/obj_blackout.yy",},},
     {"id":{"name":"obj_config","path":"objects/obj_config/obj_config.yy",},},
     {"id":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},},
     {"id":{"name":"obj_dungeon_enter","path":"objects/obj_dungeon_enter/obj_dungeon_enter.yy",},},

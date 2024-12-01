@@ -1,6 +1,4 @@
 /// @description Some attributes
-event_inherited();
-
 hp_max = 1;
 hp = hp_max
 
