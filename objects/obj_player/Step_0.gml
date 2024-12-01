@@ -134,6 +134,17 @@ switch (state){
 	
 	case state_player.die:
 	{
+		if (sprite_index != spr_player_die){
+			sprite_index = spr_player_die;
+			image_index = 0;
+		}
+		image_speed = 2;
+		
+		if(ceil(image_index) >= image_number - 0.1){
+			instance_create_layer(x,y,"Menu",obj_blackout);
+			if (obj_blackout.alpha >= .98) room_goto(rm_lobby);
+			state = state_player.spawn;
+		}
 	}
 	break;
 	

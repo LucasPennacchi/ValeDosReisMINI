@@ -5,7 +5,7 @@ event_inherited(); // oEntity default create
 
 depth = 5;
 instance_create_layer(x,y,"Instances",obj_player_shadow);
-state = state_player.run;
+state = state_player.idle;
 origin = [x,y];
 
 can_roll = true;
