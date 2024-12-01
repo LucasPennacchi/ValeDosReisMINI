@@ -16,7 +16,7 @@ if(velh!=0 && !stunned){
 // Stun
 if (stunned){
 	timer_stun += 1;
-	if (timer_stun >= stun_delay * room_speed) {
+	if (timer_stun >= stun_delay * global.frames_per_second) {
 		timer_stun = 0;
 		stunned = false;
 	}
@@ -25,7 +25,7 @@ if (stunned){
 // Attack
 if (!can_atk){
 	timer_atk += 1;
-	if (timer_atk >= atk_delay * room_speed) {
+	if (timer_atk >= atk_delay * global.frames_per_second) {
 		timer_atk = 0;
 		can_atk = true;
 	}
@@ -34,7 +34,7 @@ if (!can_atk){
 // Invulnerability
 if (invulnerable){
 	timer_invulnerability += 1;
-	if (timer_invulnerability >= invulnerability_delay * room_speed) {
+	if (timer_invulnerability >= invulnerability_delay * global.frames_per_second) {
 		timer_invulnerability = 0;
 		invulnerable = false;
 	}
@@ -43,7 +43,7 @@ if (invulnerable){
 // Save last pos (timed by last_pos_delay)
 if (state != STATE_PLAYER.FALL){
 	timer_last_pos += 1;
-	if (timer_last_pos >= last_pos_delay * room_speed) {
+	if (timer_last_pos >= last_pos_delay * global.frames_per_second) {
 		timer_last_pos = 0;
 		last_pos = [x,y];
 	}
@@ -51,6 +51,6 @@ if (state != STATE_PLAYER.FALL){
 
 
 timer_inv += 1;
-if (timer_inv >= 0.1 * room_speed) {timer_inv = 0;if (invulnerable){if (image_alpha != .7) image_alpha = .7;else image_alpha = .9;} else image_alpha = 1;}
+if (timer_inv >= 0.1 * global.frames_per_second) {timer_inv = 0;if (invulnerable){if (image_alpha != .7) image_alpha = .7;else image_alpha = .9;} else image_alpha = 1;}
 
 #endregion

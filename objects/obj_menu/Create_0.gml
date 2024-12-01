@@ -21,6 +21,7 @@ function menu_choose (_menu_index){
 			var _center_x = room_width / 2;
 			var _center_y = room_height / 2;
 			instance_create_layer(_center_x,_center_y,"Instances",obj_player);
+			instance_create_layer(_center_x,_center_y,"Menu",obj_pause);
 			instance_destroy()
 		}
 		break;

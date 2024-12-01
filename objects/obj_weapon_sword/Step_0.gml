@@ -1,4 +1,11 @@
 /// @description Inserir descrição aqui
+if (variable_global_exists("pause")){
+	if (global.pause){
+		image_speed = 0;
+		exit;
+	}
+}
+
 if (!instance_exists(target)) instance_destroy();
 else {
 	depth = target.depth - 1;

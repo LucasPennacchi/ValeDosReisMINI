@@ -9,7 +9,7 @@ if (variable_global_exists("pause")){
 // Delay
 if (!can_enter){
 	timer_enter += 1;
-	if (timer_enter >= delay * room_speed) {
+	if (timer_enter >= delay * global.frames_per_second) {
 		timer_enter = 0;
 		can_enter = true;
 	}

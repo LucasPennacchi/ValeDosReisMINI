@@ -1,6 +1,10 @@
 /// @description Inserir descrição aqui
 global.difficulty = 0;
-
+global.dialogue = false;
+global.pause = false;
+global.game_time = 0;
+global.show_game_time = true;
+global.frames_per_second = game_get_speed(gamespeed_fps);
 
 #region KEYS
 global.key_up = ord("W");

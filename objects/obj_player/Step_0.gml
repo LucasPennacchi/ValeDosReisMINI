@@ -205,7 +205,7 @@ switch (state){
 // Roll
 if (!can_roll){
 	timer_roll += 1;
-	if (timer_roll >= roll_delay * room_speed) {
+	if (timer_roll >= roll_delay * global.frames_per_second) {
 		timer_roll = 0;
 		can_roll = true;
 	}
@@ -214,7 +214,7 @@ if (!can_roll){
 // Energy Points
 if (ep_lost){
 	timer_ep += 1;
-	if (timer_ep >= ep_delay * room_speed) {
+	if (timer_ep >= ep_delay * global.frames_per_second) {
 		timer_ep = 0;
 		ep_lost = false;
 	}
