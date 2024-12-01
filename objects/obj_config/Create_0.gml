@@ -2,6 +2,7 @@
 global.difficulty = 0;
 global.dialogue = false;
 global.pause = false;
+global.fullscreen = false;
 
 global.volume = 100;
 last_volume = global.volume;

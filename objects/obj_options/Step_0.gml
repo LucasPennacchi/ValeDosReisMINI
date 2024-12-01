@@ -1,4 +1,4 @@
-config_items_origin = [draw_difficulty(real(global.difficulty)),string(global.volume),"","",draw_show_game_time(real(global.show_game_time)),""];
+config_items_origin = [draw_difficulty(real(global.difficulty)),string(global.volume),draw_boolean(global.fullscreen),"",draw_show_game_time(real(global.show_game_time)),""];
 
 if (!selected){
 	config_items_final = config_items_origin;

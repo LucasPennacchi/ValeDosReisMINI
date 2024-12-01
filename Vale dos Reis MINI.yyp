@@ -81,6 +81,7 @@
     {"id":{"name":"collision","path":"scripts/collision/collision.yy",},},
     {"id":{"name":"create_one","path":"scripts/create_one/create_one.yy",},},
     {"id":{"name":"display_char","path":"scripts/display_char/display_char.yy",},},
+    {"id":{"name":"draw_boolean","path":"scripts/draw_boolean/draw_boolean.yy",},},
     {"id":{"name":"draw_difficulty","path":"scripts/draw_difficulty/draw_difficulty.yy",},},
     {"id":{"name":"draw_reset","path":"scripts/draw_reset/draw_reset.yy",},},
     {"id":{"name":"draw_show_game_time","path":"scripts/draw_show_game_time/draw_show_game_time.yy",},},
