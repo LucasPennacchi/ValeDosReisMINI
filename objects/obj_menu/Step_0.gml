@@ -5,7 +5,7 @@ switch (state){
 	{	
 		if (keyboard_check_pressed(vk_anykey) && !title_fade){
 			title_fade = true;
-			audio_play_sound(snd_menu_select,1,false);
+			audio_play_sound(snd_notification,1,false);
 		}
 		if(!title_fade){
 			if (title.image_alpha < 1) title.image_alpha += .1;

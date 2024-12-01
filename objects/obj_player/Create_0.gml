@@ -74,6 +74,7 @@ function change_state(_move_key = false, _roll_key= false, _attack_key= false){
 function attack(){
 	with(weapon){
 		attacking = true;
+		audio_play_sound(sound,1,false);
 	}
 	can_atk = false;
 	atk_ep = (-1) * weapon.ep_cost;

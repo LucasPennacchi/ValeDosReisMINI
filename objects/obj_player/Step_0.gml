@@ -27,6 +27,7 @@ create_one(weapon,"Hitboxes");
 if (hp <= 0) state = STATE_PLAYER.DIE;
 if (place_meeting(x,y,obj_hole) && state != STATE_PLAYER.FALL && !invulnerable){
 	state = STATE_PLAYER.FALL;
+	audio_play_sound(snd_fall,1,false);
 	return_pos = last_pos;
 }
 
@@ -102,6 +103,7 @@ switch (state){
 			image_index = 0;
 			move_dir = point_direction(0,0,(_key_right - _key_left), (_key_down - _key_up));
 			invulnerable = true;
+			audio_play_sound(snd_roll,1,false);
 		}
 		var _velocity = velc * 2;
 		image_speed = 20*_velocity;
@@ -140,6 +142,7 @@ switch (state){
 			image_index = 0;
 			//move_dir = point_direction(0,0,(_key_right - _key_left), (_key_down - _key_up));
 			invulnerable = true;
+			audio_play_sound(snd_take_dmg,2,false);
 		}
 		
 		image_speed = 10;
@@ -177,9 +180,9 @@ switch (state){
 		}
 		x = lerp(x,_hole.x,0.2);
 		y = lerp(y,_hole.y,0.2);
-		image_angle += 2;
-		image_xscale *= .99;
-		image_yscale *= .99;
+		image_angle += 4;
+		image_xscale *= .96;
+		image_yscale *= .96;
 		
 		if (abs(image_xscale) <= .3) {
 			image_xscale = 1;
