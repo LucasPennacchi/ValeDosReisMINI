@@ -12,8 +12,11 @@
     "name":"Player",
     "path":"folders/Objects/Entity/Player.yy",
   },
-  "parentObjectId":null,
-  "persistent":false,
+  "parentObjectId":{
+    "name":"oRunnable",
+    "path":"objects/oRunnable/oRunnable.yy",
+  },
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,

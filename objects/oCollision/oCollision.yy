@@ -9,7 +9,10 @@
     "name":"Scene",
     "path":"folders/Objects/Scene.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oRunnable",
+    "path":"objects/oRunnable/oRunnable.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

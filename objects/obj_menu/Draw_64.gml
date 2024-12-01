@@ -8,8 +8,8 @@ draw_set_font(fnt_menu);
 if (state == state_menu.menu){
 	var i = 0;
 	repeat (menu_items_length) {
-		draw_set_color(#596989);
-		if (menu_index == i) draw_set_color(#cbdbfc);
+		draw_set_color(color.c2);
+		if (menu_index == i) draw_set_color(color.c1);
 		draw_text(center_x, center_y + (30 *i),menu_items[i]);
 		i++;
 	}
@@ -19,7 +19,7 @@ else if (state == state_menu.options){
 else if (state == state_menu.controls){
 	draw_set_halign(fa_left);
 	
-	draw_set_color(#cbdbfc);
+	draw_set_color(color.c1);
 	draw_text(center_x/1.2,center_y,
 		"Up\n"+
 		"Down\n"+

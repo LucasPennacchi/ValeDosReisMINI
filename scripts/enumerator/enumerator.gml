@@ -1,3 +1,12 @@
+enum color {
+	c1 = #cbdbfc,
+	c2 = #596989,
+	c3 = #596989,
+	c4 = #35334c,
+	c5 = #27243d,
+	c6 = #222034,
+}
+
 enum state_menu {
 	title,
 	menu,
@@ -17,4 +26,5 @@ enum state_player {
 	attack,
 	take_dmg,
 	die,
+	fall,
 }

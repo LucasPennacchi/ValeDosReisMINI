@@ -12,7 +12,10 @@
     "name":"Entity",
     "path":"folders/Objects/Entity.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oRunnable",
+    "path":"objects/oRunnable/oRunnable.yy",
+  },
   "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
