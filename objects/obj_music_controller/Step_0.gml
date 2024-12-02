@@ -1,22 +1,40 @@
-//if (!audio_is_playing(snd_track_menu)) audio_play_sound_on(global.music_emitter,snd_track_menu,1,true);
+
+audio_emitter_gain(global.music_emitter, fade);
 
 switch (room) {
 	case (rm_menu) :
 	{
+		var _sound = snd_track_menu;
+		
 		if (last_room != room) {
 			switched = true;
 		}
-		if (switched) if (fade_out(snd_track_lobby)) switched = false;
-		else fade_in(snd_track_menu);
+		if (switched) {
+			if (fade_out()){
+				audio_stop_all();
+				if (!audio_is_playing(_sound)) audio_play_sound_on(global.music_emitter,_sound,1,true);
+				switched = false;
+			}
+			
+		}
+		else fade_in();
 	}
 	break;
 	case (rm_lobby) :
 	{
+		var _sound = snd_track_lobby;
 		if (last_room != room) {
 			switched = true;
 		}
-		if (switched) if (fade_out(snd_track_menu)) switched = false;
-		else fade_in(snd_track_lobby);
+		if (switched) {
+			if (fade_out()){
+				audio_stop_all();
+				if (!audio_is_playing(_sound)) audio_play_sound_on(global.music_emitter,_sound,1,true);
+				switched = false;
+			}
+			
+		}
+		else fade_in();
 	}
 	break;
 	case (rm_dungeon) :
