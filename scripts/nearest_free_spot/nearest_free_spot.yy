@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"nearest_free_spot",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"nearest_free_spot",
+  "parent":{
+    "name":"Movement",
+    "path":"folders/Scripts/Movement.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -4,24 +4,58 @@ event_inherited();
 set_hp(3 + (2 * global.difficulty));
 dmg = 0.5 + (0.5 * global.difficulty);
 invulnerability_delay = 0.5 + (0.2 * global.difficulty);
+atk_delay = 2.1 - ((global.difficulty + 1)/10);
+velc = .5;
+velc_origin = velc;
+velc_roll = 1;
+
+atk_range = 20;
+follow_range = 40;
+
 attacking = false;
 
 function attack(){
+	image_speed = 5 * velc;
 	if (sprite_index != spr_roll_beetle_hide && !attacking){
 		sprite_index = spr_roll_beetle_hide;
-		
-		if(ceil(image_index) >= image_number - 0.1){
-			sprite_index = spr_roll_beetle_roll;
-			attacking = true;
-		}
+	}
+	if(sprite_index == spr_roll_beetle_hide && ceil(image_index) >= image_number - 0.1){
+		sprite_index = spr_roll_beetle_roll;
+		attacking = true;
+		move_dir = point_direction(x,y,obj_player.x,obj_player.y);
 	}
 	if (sprite_index == spr_roll_beetle_roll){
+		velc = velc_roll;
+		image_speed = 15 * velc;
+		
+		velh = lengthdir_x(velc,move_dir);
+		velv = lengthdir_y(velc,move_dir);
+		
 		if (collision(oCollision)){
-			sprite_index = spr_roll_beetle_roll;
+			state = STATE_ENEMY.IDLE;
+			attacking = false;
+			velc = velc_origin;
+			can_atk = false;
 		}
-	}
-	if (sprite_index == spr_roll_beetle_roll){
 		
+		x += velh;
+		y += velv;
 	}
-	
+}
+
+function idle(){
+	if (sprite_index != spr_roll_beetle_idle){
+		sprite_index = spr_roll_beetle_idle;
+		image_index = 0;
+	}
+	velc = velc_origin;
+	image_speed = 1;
+}
+function run(){
+	if (sprite_index != spr_roll_beetle_run){
+		sprite_index = spr_roll_beetle_run;
+		image_index = 0;
+	}
+	velc = velc_origin;
+	image_speed = 10 * velc;
 }

@@ -2,6 +2,9 @@
 hp_max = 10;
 hp = hp_max;
 
+shadow = instance_create_layer(x,y,"Instances",obj_shadow);
+shadow.target = self;
+
 #region COMBAT
 dmg = 1;
 can_atk = true;

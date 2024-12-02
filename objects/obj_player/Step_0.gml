@@ -26,6 +26,9 @@ weapon = create_one(weapon,"Hitboxes");
 weapon.target = self;
 
 if (hp <= 0) state = STATE_PLAYER.DIE;
+else if (hp == 1 && hp_max != 1) if(!audio_is_playing(snd_one_hp)) audio_play_sound(snd_one_hp,1,true);
+else if (hp != 1) audio_stop_sound(snd_one_hp);
+
 if (place_meeting(x,y,obj_hole) && state != STATE_PLAYER.FALL && !invulnerable){
 	state = STATE_PLAYER.FALL;
 	audio_play_sound(snd_fall,1,false);

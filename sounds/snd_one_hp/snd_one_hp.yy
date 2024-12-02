@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_1",
+  "%Name":"snd_one_hp",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,16 +10,16 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.984,
-  "name":"snd_1",
+  "name":"snd_one_hp",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Player",
+    "path":"folders/Sounds/Player.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_1.mp3",
+  "soundFile":"snd_one_hp.mp3",
   "type":0,
-  "volume":0.1,
+  "volume":0.01,
 }

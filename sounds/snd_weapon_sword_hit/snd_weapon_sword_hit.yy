@@ -12,8 +12,8 @@
   "duration":0.312,
   "name":"snd_weapon_sword_hit",
   "parent":{
-    "name":"Player",
-    "path":"folders/Sounds/Player.yy",
+    "name":"Weapons",
+    "path":"folders/Sounds/Weapons.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

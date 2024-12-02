@@ -4,7 +4,7 @@ event_inherited(); // oEntity default create
 #region DEFAULT (DO NOT CHANGE)
 
 depth = 5;
-instance_create_layer(x,y,"Instances",obj_player_shadow);
+
 state = STATE_PLAYER.SPAWN;
 origin = [x,y];
 
@@ -27,7 +27,7 @@ timer_run = 0;
 #region PLAYER ATTRIBUTES (CAN CHANGE)
 
 set_hp(5);
-//hp = 3; // HP TEST
+// hp = 1; // HP TEST
 
 dmg = 0;
 velc = .8;

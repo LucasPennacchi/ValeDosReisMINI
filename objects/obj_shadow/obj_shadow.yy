@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_player_shadow",
+  "%Name":"obj_shadow",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_player_shadow",
+  "name":"obj_shadow",
   "overriddenProperties":[],
   "parent":{
-    "name":"Player",
-    "path":"folders/Objects/Entity/Player.yy",
+    "name":"Entity",
+    "path":"folders/Objects/Entity.yy",
   },
   "parentObjectId":{
     "name":"oRunnable",
