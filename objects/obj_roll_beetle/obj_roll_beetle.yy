@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_roll_bettle",
+  "%Name":"obj_roll_beetle",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_roll_bettle",
+  "name":"obj_roll_beetle",
   "overriddenProperties":[],
   "parent":{
-    "name":"Roll Bettle",
-    "path":"folders/Objects/Entity/Enemies/Roll Bettle.yy",
+    "name":"Roll Beetle",
+    "path":"folders/Objects/Entity/Enemies/Roll Beetle.yy",
   },
   "parentObjectId":{
     "name":"oEnemy",
@@ -35,12 +35,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_roll_bettle_idle",
-    "path":"sprites/spr_roll_bettle_idle/spr_roll_bettle_idle.yy",
+    "name":"spr_roll_beetle_idle",
+    "path":"sprites/spr_roll_beetle_idle/spr_roll_beetle_idle.yy",
   },
   "spriteMaskId":{
-    "name":"spr_roll_bettle_roll",
-    "path":"sprites/spr_roll_bettle_roll/spr_roll_bettle_roll.yy",
+    "name":"spr_roll_beetle_roll",
+    "path":"sprites/spr_roll_beetle_roll/spr_roll_beetle_roll.yy",
   },
   "visible":true,
 }

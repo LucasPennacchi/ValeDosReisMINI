@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_roll_bettle_roll",
+  "%Name":"spr_roll_beetle_roll",
   "bboxMode":2,
   "bbox_bottom":7,
   "bbox_left":1,
@@ -24,19 +24,19 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"bf0d7419-a1a8-466f-aa23-2a9b675f6a05","blendMode":0,"displayName":"default","isLocked":false,"name":"bf0d7419-a1a8-466f-aa23-2a9b675f6a05","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_roll_bettle_roll",
+  "name":"spr_roll_beetle_roll",
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"Roll Bettle",
-    "path":"folders/Sprites/Objects/Entities/Enemies/Roll Bettle.yy",
+    "name":"Roll Beetle",
+    "path":"folders/Sprites/Objects/Entities/Enemies/Roll Beetle.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_roll_bettle_roll",
+    "%Name":"spr_roll_beetle_roll",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -60,7 +60,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_roll_bettle_roll",
+    "name":"spr_roll_beetle_roll",
     "playback":1,
     "playbackSpeed":1.0,
     "playbackSpeedType":0,
@@ -72,16 +72,16 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4ea3b418-bdfc-4865-b183-de4e1546f965","path":"sprites/spr_roll_bettle_roll/spr_roll_bettle_roll.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4ea3b418-bdfc-4865-b183-de4e1546f965","path":"sprites/spr_roll_beetle_roll/spr_roll_beetle_roll.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"ca4f8682-39bc-4bce-bf71-ec18e18bf0d0","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"96730477-7611-4264-990b-0b2b63d63c4d","path":"sprites/spr_roll_bettle_roll/spr_roll_bettle_roll.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"96730477-7611-4264-990b-0b2b63d63c4d","path":"sprites/spr_roll_beetle_roll/spr_roll_beetle_roll.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"05d9f8c2-c9aa-42d3-b857-fc7333692a98","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6c0bb251-35d6-4b25-92da-48bde4d787ff","path":"sprites/spr_roll_bettle_roll/spr_roll_bettle_roll.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6c0bb251-35d6-4b25-92da-48bde4d787ff","path":"sprites/spr_roll_beetle_roll/spr_roll_beetle_roll.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"62fbc02f-86d3-4870-978f-3988e92efb52","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8490ac90-4a87-4fd9-b612-f196a637e477","path":"sprites/spr_roll_bettle_roll/spr_roll_bettle_roll.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8490ac90-4a87-4fd9-b612-f196a637e477","path":"sprites/spr_roll_beetle_roll/spr_roll_beetle_roll.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"1385a654-2fe5-4dc9-b9f9-7293bdcccfd0","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
