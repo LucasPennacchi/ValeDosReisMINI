@@ -2,14 +2,14 @@
   "$GMSound":"",
   "%Name":"snd_pause_close",
   "audioGroupId":{
-    "name":"Menu",
-    "path":"audiogroups/Menu",
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.696,
+  "duration":0.24,
   "name":"snd_pause_close",
   "parent":{
     "name":"Pause",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_pause_close.mp3",
   "type":0,
-  "volume":0.1,
+  "volume":0.2,
 }

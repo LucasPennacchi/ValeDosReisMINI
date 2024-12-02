@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_2",
+  "%Name":"snd_11",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.032,
-  "name":"snd_2",
+  "duration":0.336,
+  "name":"snd_11",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_2.mp3",
+  "soundFile":"snd_11.mp3",
   "type":0,
-  "volume":0.1,
+  "volume":0.2,
 }

@@ -12,6 +12,6 @@ follow_range = 50;
 can_atk = true;
 
 #region FUNCTIONS
-attack(){}
+function attack(){}
 
 #endregion

@@ -84,7 +84,7 @@ switch (state){
 		
 		timer_run += 1;
 		if (timer_run > 20){
-			//audio_play_sound(snd_roll,1,false);
+			audio_play_sound(snd_step,1,false);
 			timer_run = 0;
 		}
 		

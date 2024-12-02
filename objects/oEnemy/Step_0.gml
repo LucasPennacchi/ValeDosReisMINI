@@ -9,20 +9,24 @@ if (instance_exists(obj_player)){
 		case "Sword": {
 			if (!invulnerable && place_meeting(x,y,_weapon_player) && _weapon_player.attacking){
 				// TAKE DAMAGE
+				if (audio_is_playing(snd_weapon_sword)){
+					audio_stop_sound(snd_weapon_sword);
+					audio_play_sound(snd_weapon_sword_hit,1,false);
+				}
 				invulnerable = true;
 				hp -= _weapon_player.dmg;
 			}
 		}
 		break;
-		case "": {
+		case "Bow": {
 			
 		}
 		break;
-		case "": {
+		case "Staff": {
 			
 		}
 		break;
-		case "": {
+		case "Spear": {
 			
 		}
 		break;
