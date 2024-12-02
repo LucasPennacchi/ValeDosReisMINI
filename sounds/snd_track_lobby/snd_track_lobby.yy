@@ -13,7 +13,7 @@
   "name":"snd_track_lobby",
   "parent":{
     "name":"Lobby",
-    "path":"folders/Sounds/Lobby.yy",
+    "path":"folders/Sounds/Menus/Lobby.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

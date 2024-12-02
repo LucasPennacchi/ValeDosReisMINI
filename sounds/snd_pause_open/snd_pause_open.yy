@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_notification",
+  "%Name":"snd_pause_open",
   "audioGroupId":{
     "name":"Menu",
     "path":"audiogroups/Menu",
@@ -10,16 +10,16 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.624,
-  "name":"snd_notification",
+  "name":"snd_pause_open",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Pause",
+    "path":"folders/Sounds/Menus/Pause.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_notification.mp3",
+  "soundFile":"snd_pause_open.mp3",
   "type":0,
-  "volume":0.15,
+  "volume":0.1,
 }

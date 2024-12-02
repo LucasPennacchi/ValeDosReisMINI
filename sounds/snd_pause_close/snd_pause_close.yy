@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_menu_invalid",
+  "%Name":"snd_pause_close",
   "audioGroupId":{
     "name":"Menu",
     "path":"audiogroups/Menu",
@@ -9,17 +9,17 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.408,
-  "name":"snd_menu_invalid",
+  "duration":0.696,
+  "name":"snd_pause_close",
   "parent":{
-    "name":"Menu",
-    "path":"folders/Sounds/Menus/Menu.yy",
+    "name":"Pause",
+    "path":"folders/Sounds/Menus/Pause.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_menu_invalid.mp3",
+  "soundFile":"snd_pause_close.mp3",
   "type":0,
-  "volume":0.2,
+  "volume":0.1,
 }

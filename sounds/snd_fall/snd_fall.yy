@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.872,
+  "duration":2.472,
   "name":"snd_fall",
   "parent":{
     "name":"Player",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_fall.mp3",
   "type":0,
-  "volume":0.15,
+  "volume":0.1,
 }

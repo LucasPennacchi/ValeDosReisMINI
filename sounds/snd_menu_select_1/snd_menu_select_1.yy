@@ -13,7 +13,7 @@
   "name":"snd_menu_select_1",
   "parent":{
     "name":"Menu",
-    "path":"folders/Sounds/Menu.yy",
+    "path":"folders/Sounds/Menus/Menu.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
