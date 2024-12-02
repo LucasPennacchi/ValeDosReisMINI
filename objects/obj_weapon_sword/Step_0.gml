@@ -6,6 +6,8 @@ if (variable_global_exists("pause")){
 	}
 }
 
+event_inherited();
+
 if (!instance_exists(target)) instance_destroy();
 else {
 	depth = target.depth - 1;
@@ -20,7 +22,6 @@ else {
 		var _angle = 1;
 		if (sign(image_xscale) != 0 && sign(image_xscale) > 0) _angle = -1;
 		else _angle = 1;
-		dmg = (dmg_normal * lvl) + target.dmg;
 		image_angle = (_angle) * lerp(abs(image_angle), 180, 0.3);
 		if (image_angle >= 175 || image_angle <= -175) {
 			attacking = false;

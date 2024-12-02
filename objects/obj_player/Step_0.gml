@@ -22,7 +22,8 @@ var _attack_key = keyboard_check_pressed(global.key_attack);
 #endregion
 
 
-create_one(weapon,"Hitboxes");
+weapon = create_one(weapon,"Hitboxes");
+weapon.target = self;
 
 if (hp <= 0) state = STATE_PLAYER.DIE;
 if (place_meeting(x,y,obj_hole) && state != STATE_PLAYER.FALL && !invulnerable){
@@ -172,6 +173,7 @@ switch (state){
 	
 	case STATE_PLAYER.FALL:
 	{
+		timer_last_pos = 0;
 		var _hole = instance_nearest(x,y,obj_hole)
 		if (sprite_index != spr_player_idle){
 			sprite_index = spr_player_idle;

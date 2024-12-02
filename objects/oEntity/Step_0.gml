@@ -41,13 +41,11 @@ if (invulnerable){
 } else timer_invulnerability = 0;
 
 // Save last pos (timed by last_pos_delay)
-if (state != STATE_PLAYER.FALL){
-	timer_last_pos += 1;
-	if (timer_last_pos >= last_pos_delay * global.frames_per_second) {
-		timer_last_pos = 0;
-		last_pos = [x,y];
-	}
-} else timer_last_pos = 0;
+timer_last_pos += 1;
+if (timer_last_pos >= last_pos_delay * global.frames_per_second) {
+	timer_last_pos = 0;
+	last_pos = [x,y];
+}
 
 
 timer_inv += 1;

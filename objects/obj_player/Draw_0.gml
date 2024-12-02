@@ -1,20 +1,6 @@
-draw_self();
-draw_reset();
+event_inherited(); // Draw self;
 
-#region HP BAR
-
-var _bar_hp_width = 5;
-var _bar_hp_heigth = .1;
-var _bar_hp_y_distance = 2;
-
-draw_healthbar(
-	x - (_bar_hp_width / 2), y - (_bar_hp_heigth / 2) + _bar_hp_y_distance,
-	x + (_bar_hp_width / 2), y  + (_bar_hp_heigth / 2) + _bar_hp_y_distance,
-	100 * (hp/hp_max),
-	COLOR.C3, COLOR.C1, COLOR.C1,
-	0, true, false);
-
-#endregion
+draw_hp_bar(self.hp,self.hp_max);
 
 #region EP BAR
 

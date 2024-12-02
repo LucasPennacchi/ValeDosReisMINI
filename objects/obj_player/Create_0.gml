@@ -9,9 +9,6 @@ state = STATE_PLAYER.IDLE;
 origin = [x,y];
 
 can_roll = true;
-can_atk = true;
-can_move = true;
-move_dir = 0;
 return_pos = last_pos;
 ep_lost = false;
 
@@ -26,10 +23,10 @@ timer_ep = 0;
 
 #region PLAYER ATTRIBUTES (CAN CHANGE)
 
-hp_max = 5;
-hp = 3;
+set_hp(5);
+//hp = 3; // HP TEST
 
-dmg = 1;
+dmg = 0;
 velc = .8;
 velc_modifier = 1;
 
