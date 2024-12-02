@@ -1,6 +1,6 @@
 /// @description Some attributes
 hp_max = 10;
-hp = hp_max
+hp = hp_max;
 
 #region COMBAT
 dmg = 1;
@@ -36,8 +36,8 @@ last_pos_delay = 1;
 
 #region FUNCTIONS
 function set_hp(_hp){
-	max_hp = _hp;
-	hp = max_hp;
+	hp_max = _hp;
+	hp = _hp;
 }
 
 #endregion

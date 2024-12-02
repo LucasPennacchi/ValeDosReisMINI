@@ -1,6 +1,4 @@
 /// @description Starting point
-
-
 state = STATE_MENU.TITLE;
 
 title = obj_title;

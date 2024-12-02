@@ -14,6 +14,7 @@ global.frames_per_second = game_get_speed(gamespeed_fps);
 audio_group_load(Player);
 audio_group_load(Menu);
 
+global.show_hp_bar = false;
 
 global.game_time = 0;
 global.show_game_time = 0;

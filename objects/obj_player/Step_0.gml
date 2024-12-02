@@ -18,7 +18,7 @@ var _move_key = ((_key_down - _key_up != 0) || (_key_right - _key_left != 0));
 
 var _roll_key = keyboard_check_pressed(global.key_roll);
 var _interact_key = keyboard_check_pressed(global.key_interact);
-var _attack_key = keyboard_check_pressed(global.key_attack);
+var _attack_key = keyboard_check(global.key_attack);
 #endregion
 
 
@@ -35,21 +35,25 @@ if (place_meeting(x,y,obj_hole) && state != STATE_PLAYER.FALL && !invulnerable){
 velh = 0;
 velv = 0;
 
+
 switch (state){
 	case STATE_PLAYER.SPAWN:
 	{
-		var _flag = false;
-		if (invulnerable){
-			invulnerable = false;
+		if (!spawned){
+			spawned = true;
+			
 			y = 0;
-		}
-		if (room == rm_lobby){
-			x = 64;
-			y = lerp(y,56,.1);
-			if (round(y) == 56) _flag = true;
+			if (room == rm_lobby) origin = [64,56];
+			else if (room == rm_menu) origin = [room_width/2,room_height/2];
 		}
 		
-		if (_flag) state = STATE_PLAYER.IDLE;
+		x = origin[0];
+		y = lerp(y,origin[1],.1);
+		
+		if (round(y) == origin[1]){
+			audio_play_sound(snd_spawn,1,false);
+			state = STATE_PLAYER.IDLE;
+		}
 	}
 	break;
 	
@@ -77,6 +81,13 @@ switch (state){
 			sprite_index = spr_player_run;
 			image_index = 0;
 		}
+		
+		timer_run += 1;
+		if (timer_run > 20){
+			//audio_play_sound(snd_roll,1,false);
+			timer_run = 0;
+		}
+		
 		var _velocity = velc;
 		image_speed = 14*_velocity;
 		
@@ -192,6 +203,7 @@ switch (state){
 			image_angle = 0;
 			if (_hole.send_to != -1){
 				room_goto(_hole.send_to);
+				spawned = false;
 				state = STATE_PLAYER.SPAWN;
 			} else {
 				x = return_pos[0];

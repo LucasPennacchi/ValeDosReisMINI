@@ -7,3 +7,4 @@ last_volume = global.volume;
 if (!global.pause && !global.dialogue && !instance_exists(oMenu)){
 	global.game_time++;
 }
+

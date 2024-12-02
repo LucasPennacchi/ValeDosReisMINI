@@ -5,17 +5,20 @@ event_inherited(); // oEntity default create
 
 depth = 5;
 instance_create_layer(x,y,"Instances",obj_player_shadow);
-state = STATE_PLAYER.IDLE;
+state = STATE_PLAYER.SPAWN;
 origin = [x,y];
 
 can_roll = true;
 return_pos = last_pos;
 ep_lost = false;
 
+spawned = false;
+
 #region TIMERS
 
 timer_roll = 0;
 timer_ep = 0;
+timer_run = 0;
 
 #endregion
 

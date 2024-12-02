@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_9",
+  "%Name":"snd_spawn",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,17 +9,17 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.96,
-  "name":"snd_9",
+  "duration":0.504,
+  "name":"snd_spawn",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Player",
+    "path":"folders/Sounds/Player.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_9.mp3",
+  "soundFile":"snd_spawn.mp3",
   "type":0,
   "volume":0.2,
 }
