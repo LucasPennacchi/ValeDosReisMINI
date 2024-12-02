@@ -28,3 +28,16 @@ enum STATE_PLAYER {
 	DIE,
 	FALL,
 }
+
+enum STATE_ENEMY {
+	SPAWN,
+	IDLE,
+	WALK,
+	RUN,
+	FOLLOW,
+	ROLL,
+	ATTACK,
+	TAKE_DMG,
+	DIE,
+	FALL,
+}
