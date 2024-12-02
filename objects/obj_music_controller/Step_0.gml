@@ -1,4 +1,4 @@
-if (!audio_is_playing(snd_track_menu)) audio_play_sound(snd_track_menu,1,true);
+if (!audio_is_playing(snd_track_menu)) audio_play_sound_on(global.music_emitter,snd_track_menu,1,true);
 
 switch (room) {
 	case (rm_menu) :

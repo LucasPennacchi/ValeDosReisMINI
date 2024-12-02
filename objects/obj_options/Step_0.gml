@@ -21,9 +21,13 @@ if (!selected){
 	switch (config_index){
 		case 0:
 		{
-			global.difficulty += _selected_move;
-			if (global.difficulty > 3) global.difficulty = 0;
-			if (global.difficulty < 0) global.difficulty = 3;
+			
+			if (global.difficulty + _selected_move <= 3 &&
+				global.difficulty + _selected_move >= 0) global.difficulty += _selected_move;
+			else {
+				_selected_move = 0;
+				audio_play_sound(snd_menu_invalid,1,false);
+			}
 		}
 		break;
 		case 1:
