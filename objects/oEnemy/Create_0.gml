@@ -13,6 +13,8 @@ follow_range = 50;
 can_atk = true;
 
 #region FUNCTIONS
+function idle(){}
+function run(){}
 function attack(){}
 function change_state (_in_range_atk, _in_range_follow){
 	

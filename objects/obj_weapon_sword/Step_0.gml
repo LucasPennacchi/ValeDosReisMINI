@@ -27,5 +27,6 @@ else {
 			attacking = false;
 		}
 	}
+	hit = false;
 }
 

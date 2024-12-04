@@ -11,4 +11,5 @@ dmg = (dmg_normal * lvl);
 
 target = obj_player;
 
+hit = false;
 attacking = false;

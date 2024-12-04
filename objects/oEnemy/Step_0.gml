@@ -13,8 +13,10 @@ if (instance_exists(obj_player)){
 					audio_stop_sound(snd_weapon_sword);
 					audio_play_sound(snd_weapon_sword_hit,1,false);
 				}
+				//knockback(_weapon_player,10);
 				invulnerable = true;
 				hp -= _weapon_player.dmg;
+				_weapon_player.hit = true;
 			}
 		}
 		break;
@@ -64,7 +66,7 @@ if (instance_exists(obj_player)){
 			attack();
 		}break;
 		case STATE_ENEMY.TAKE_DMG: {
-		
+			
 		}break;
 		case STATE_ENEMY.DIE: {
 		
