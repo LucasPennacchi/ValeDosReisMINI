@@ -39,10 +39,9 @@
     {"$GMRInstanceLayer":"","%Name":"Enemy","depth":300,"effectEnabled":true,"effectType":null,"gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Enemy","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":400,"effectEnabled":true,"effectType":null,"gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tilemap","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tilemap","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":9,"SerialiseWidth":16,"TileCompressedData":[
-          8,43,44,44,3,3,44,44,3,-3,44,1,3,-3,44,2,45,53,-13,-2147483648,5,20,55,12,-2147483648,6,-11,-2147483648,
-          3,30,14,12,-14,-2147483648,4,55,53,17,19,-10,-2147483648,6,15,-2147483648,55,53,37,39,-12,-2147483648,
-          5,55,12,-2147483648,-2147483648,5,-4,-2147483648,2,57,46,-5,-2147483648,4,55,53,31,32,-4,-2147483648,
-          3,57,9,8,-3,-2147483648,6,16,-2147483648,14,63,64,23,-5,64,1,23,-3,64,4,23,64,64,65,
+          8,43,44,44,3,3,44,44,3,-3,44,1,3,-3,44,2,45,53,-13,21,5,20,55,12,21,6,-11,21,3,30,14,12,-14,21,4,55,
+          53,17,19,-10,21,6,15,21,55,53,37,39,-12,21,5,55,12,21,21,5,-4,21,2,57,46,-5,21,4,55,53,31,32,-4,21,3,
+          57,9,8,-3,21,6,16,21,14,63,64,23,-5,64,1,23,-3,64,4,23,64,64,65,
         ],"TileDataFormat":1,},"tilesetId":{"name":"ts_game","path":"tilesets/ts_game/ts_game.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4283183925,"depth":600,"effectEnabled":true,"effectType":null,"gridX":8,"gridY":8,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],

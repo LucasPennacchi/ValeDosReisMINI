@@ -16,22 +16,26 @@ attacking = false;
 
 function attack(){
 	image_speed = 5 * velc;
-	if (sprite_index != spr_roll_beetle_hide && !attacking){
+	if (sprite_index != spr_roll_beetle_hide && !attacking){ // HIDE
 		sprite_index = spr_roll_beetle_hide;
 	}
-	if(sprite_index == spr_roll_beetle_hide && ceil(image_index) >= image_number - 0.1){
+	if(sprite_index == spr_roll_beetle_hide && ceil(image_index) >= image_number - 0.1){ // START ROLLING
 		sprite_index = spr_roll_beetle_roll;
 		attacking = true;
 		move_dir = point_direction(x,y,obj_player.x,obj_player.y);
 	}
-	if (sprite_index == spr_roll_beetle_roll){
+	if (sprite_index == spr_roll_beetle_roll){ // WHILE ROLLING
 		velc = velc_roll;
 		image_speed = 15 * velc;
 		
 		velh = lengthdir_x(velc,move_dir);
 		velv = lengthdir_y(velc,move_dir);
 		
-		if (collision(oCollision)){
+		if (collision(oCollision)){ // IF COLLIDED WITH SOMETHING, STOP
+			//var _fix_collision = 9;
+			//velh = -_fix_collision * lengthdir_x(velc,move_dir);
+			//velv = -_fix_collision * lengthdir_y(velc,move_dir);
+			nearest_free_spot(oCollision,10);
 			state = STATE_ENEMY.IDLE;
 			attacking = false;
 			velc = velc_origin;

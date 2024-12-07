@@ -48,7 +48,7 @@ if (timer_last_pos >= last_pos_delay * global.frames_per_second) {
 }
 
 
-timer_inv += 1;
-if (timer_inv >= 0.1 * global.frames_per_second) {timer_inv = 0;if (invulnerable){if (image_alpha != .7) image_alpha = .7;else image_alpha = .9;} else image_alpha = 1;}
+//timer_inv += 1;
+//if (timer_inv >= 0.1 * global.frames_per_second) {timer_inv = 0;if (invulnerable){if (image_alpha != .7) image_alpha = .7;else image_alpha = .9;} else image_alpha = 1;}
 
 #endregion

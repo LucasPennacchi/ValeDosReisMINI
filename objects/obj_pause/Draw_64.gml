@@ -23,7 +23,7 @@ if (global.show_game_time == 2 || (global.show_game_time == 1 && global.pause)){
 		{
 			outlineEnable: true,
 			outlineDistance: 4,
-			outlineColor: COLOR.C4,
+			outlineColor: COLOR.D4,
 			outlineAlpha: 1,
 		})
 		draw_set_font(fnt_menu_outline);

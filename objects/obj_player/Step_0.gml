@@ -25,14 +25,25 @@ var _attack_key = keyboard_check(global.key_attack);
 weapon = create_one(weapon,"Hitboxes");
 weapon.target = self;
 
-if (hp <= 0) state = STATE_PLAYER.DIE;
-else if (hp == 1 && hp_max != 1) if(!audio_is_playing(snd_one_hp)) audio_play_sound(snd_one_hp,1,true);
+if (hp <= 0) {
+	state = STATE_PLAYER.DIE;
+	hp = 0;
+}
+if (hp > hp_max) hp = hp_max;
+if (hp == 1 && hp_max != 1) if(!audio_is_playing(snd_one_hp)) audio_play_sound(snd_one_hp,1,true);
 else if (hp != 1) audio_stop_sound(snd_one_hp);
 
 if (place_meeting(x,y,obj_hole) && state != STATE_PLAYER.FALL && !invulnerable){
 	state = STATE_PLAYER.FALL;
 	audio_play_sound(snd_fall,1,false);
 	return_pos = last_pos;
+}
+if (instance_exists(oEnemy)){
+	var _enemy = instance_nearest(x,y,oEnemy);
+	if (place_meeting(x,y,_enemy) && _enemy.attacking && !invulnerable && state != STATE_PLAYER.DIE) {
+		state = STATE_PLAYER.TAKE_DMG;
+		hp -= _enemy.dmg;
+	}
 }
 
 velh = 0;
@@ -158,12 +169,17 @@ switch (state){
 			//move_dir = point_direction(0,0,(_key_right - _key_left), (_key_down - _key_up));
 			invulnerable = true;
 			audio_play_sound(snd_take_dmg,2,false);
+			stunned = true;
 		}
 		
-		image_speed = 10;
 		timer_invulnerability = 0;
 		
-		if(ceil(image_index) >= image_number - 0.1){
+		if(ceil(image_index) >= image_number - 0.5){
+			image_speed = 0;
+		} else {
+			image_speed = 10;
+		}
+		if(!stunned){
 			state = STATE_PLAYER.IDLE;
 		}
 	}
@@ -175,12 +191,17 @@ switch (state){
 			sprite_index = spr_player_die;
 			image_index = 0;
 		}
-		image_speed = 2;
 		
+		if (instance_exists(obj_blackout)) if (obj_blackout.alpha >= .98) room_goto(rm_menu);
+		
+		if(ceil(image_index) >= image_number - 2){
+			image_alpha *= .97;
+		}
 		if(ceil(image_index) >= image_number - 0.1){
-			instance_create_layer(x,y,"Menu",obj_blackout);
-			if (obj_blackout.alpha >= .98) room_goto(rm_lobby);
-			state = STATE_PLAYER.SPAWN;
+			create_one(obj_blackout,"Menu");
+			image_speed = 0;
+		} else {
+			image_speed = 4;
 		}
 	}
 	break;

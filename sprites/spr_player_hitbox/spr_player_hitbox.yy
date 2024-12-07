@@ -1,7 +1,7 @@
 {
   "$GMSprite":"",
   "%Name":"spr_player_hitbox",
-  "bboxMode":2,
+  "bboxMode":0,
   "bbox_bottom":7,
   "bbox_left":1,
   "bbox_right":5,

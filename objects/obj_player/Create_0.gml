@@ -27,7 +27,7 @@ timer_run = 0;
 #region PLAYER ATTRIBUTES (CAN CHANGE)
 
 set_hp(5);
-// hp = 1; // HP TEST
+//hp = 1; // HP TEST
 
 dmg = 0;
 velc = .8;
@@ -47,6 +47,7 @@ atk_delay = weapon.atk_delay;
 roll_ep = -1;
 roll_delay = 0.3;
 
+stun_delay = 1.1;
 
 #endregion
 

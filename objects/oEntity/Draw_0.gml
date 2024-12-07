@@ -9,7 +9,7 @@ function draw_hp_bar (_hp, _hp_max, _bar_hp_y_distance = 2, _bar_hp_width = 5, _
 		x - (_bar_hp_width / 2), y - (_bar_hp_heigth / 2) + _bar_hp_y_distance,
 		x + (_bar_hp_width / 2), y  + (_bar_hp_heigth / 2) + _bar_hp_y_distance,
 		100.0 * (_hp/_hp_max),
-		COLOR.C3, COLOR.C2, COLOR.C1,
+		COLOR.D3, COLOR.D2, COLOR.D1,
 		0, true, false);
 	draw_reset();
 	

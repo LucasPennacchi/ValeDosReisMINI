@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player_hitbox",
-    "path":"sprites/spr_player_hitbox/spr_player_hitbox.yy",
+    "name":"spr_shadow",
+    "path":"sprites/spr_shadow/spr_shadow.yy",
   },
   "spriteMaskId":null,
   "visible":true,
