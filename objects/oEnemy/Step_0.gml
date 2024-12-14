@@ -57,11 +57,10 @@ if (instance_exists(obj_player)){
 			
 		}break;
 		case STATE_ENEMY.WALK: {
-			run();
-			move_to(obj_player, _in_range_follow && !_in_range_atk);
-			change_state(_in_range_atk,_in_range_follow);
-			
-	}break;
+			//run();
+			//move_to(obj_player, _in_range_follow && !_in_range_atk);
+			//change_state(_in_range_atk,_in_range_follow);
+		}break;
 		case STATE_ENEMY.ATTACK: {
 			attack();
 		}break;
@@ -72,4 +71,6 @@ if (instance_exists(obj_player)){
 		
 		}break;
 	}
+} else {
+	idle();
 }
